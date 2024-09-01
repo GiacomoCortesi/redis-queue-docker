@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+    redis-server:
+      image: "redis:latest"
+    redis-queue:
+      build:
+        context: .
+        dockerfile: Dockerfile
+      environment:
+        - REDIS_HOST=redis-server
+      depends_on:
+        - redis-server 
+
