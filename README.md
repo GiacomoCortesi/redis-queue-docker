@@ -1,6 +1,8 @@
 # redis-queue docker
 Minimal docker for [redis-queue](https://python-rq.org/)
 
+IMPORTANT NOTE: redis queue needs to run in the python project root folder, hence you need to map the code folder into the redis-queue docker
+
 ## Build
 `docker build -t rq .`
 
